@@ -1,0 +1,4 @@
+Poné acá tus fotos (jpg, png o webp), la cantidad que quieras.
+Se muestran en orden alfabético: 01.jpg, 02.jpg, 03.jpg...
+Mientras esta carpeta no tenga fotos, el álbum usa las de ejemplo.
+Las fotos HEIC del iPhone hay que convertirlas a JPG antes.

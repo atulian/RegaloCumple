@@ -1,0 +1,2 @@
+Para ponerle música: copiá acá la canción con el nombre exacto  musica.mp3
+Empieza a sonar sola cuando ella toca el cofre.
