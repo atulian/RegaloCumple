@@ -945,3 +945,15 @@ button {
   background: linear-gradient(100deg, #2a0f3c, #7a2560);
   box-shadow: 0 8px 18px -6px rgba(60, 10, 60, 0.7);
 }
+
+/* reproductor de YouTube: suena de fondo, detrás de la escena */
+.yt-caja {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+  opacity: 0.01;
+  pointer-events: none;
+}

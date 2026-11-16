@@ -10,7 +10,7 @@ Hecho con Vite, React 19, Three.js (React Three Fiber + postprocesado) y Motion.
 | Qué | Dónde |
 | --- | --- |
 | **Fotos** | Carpeta `src/fotos/` |
-| **Música** | Copiá la canción como `public/musica.mp3` |
+| **Música** | En `src/config.ts`, `musica.youtube` lleva el código del video de YouTube. Si lo dejás vacío, usa `public/musica.mp3` |
 | **Todos los textos** (carta, frases, ticket, tarjeta) | `src/config.ts` |
 
 ### Agregar fotos desde el celular o la compu

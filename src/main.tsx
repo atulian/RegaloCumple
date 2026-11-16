@@ -6,5 +6,8 @@ import '@fontsource/caveat/500.css'
 import '@fontsource-variable/inter'
 import './estilos.css'
 import App from './App'
+import { prepararMusica } from './sonido'
+
+prepararMusica()
 
 createRoot(document.getElementById('root')!).render(<App />)

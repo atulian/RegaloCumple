@@ -8,6 +8,12 @@ export const config = {
   /** Dirección publicada del regalo: es a donde lleva el QR de la tarjeta */
   url: 'https://atulian.github.io/RegaloCumple/',
 
+  /** Música: el código del video de YouTube (lo que va después de youtu.be/). Vacío = usa public/musica.mp3 */
+  musica: {
+    youtube: 'M05xCP34uUw',
+    desdeSegundo: 0,
+  },
+
   tarjeta: {
     titulo: 'Chuli',
     texto: 'tengo algo guardado para vos',
@@ -46,6 +52,7 @@ export const config = {
       'Nuestra familia',
       'Mirá esa carita, chuli',
       'Así de en paz me hacés sentir',
+      'Las reinas de la casa',
       'Mi lugar favorito sos vos, gordi',
       'Esa sonrisa, chuli',
       'Brindar con vos',
@@ -55,7 +62,6 @@ export const config = {
       'Hasta la cima con vos, chuchi',
       'Un beso en las nubes',
       'Cantando juntos',
-      'Brindis en Mendoza',
       'Entre viñedos con vos',
       'Tardes así, gordi',
       'Río, la primera vez',

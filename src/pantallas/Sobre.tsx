@@ -74,7 +74,10 @@ export function Sobre({ alTerminar }: { alTerminar: () => void }) {
           </motion.p>
           <motion.button
             className="carta-boton"
-            onClick={alTerminar}
+            onClick={() => {
+              iniciarAudio()
+              alTerminar()
+            }}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={abierto ? { opacity: 1, scale: 1 } : { opacity: 0 }}
             transition={{ delay: 3.1 + c.lineas.length * 0.55, duration: 0.6 }}
