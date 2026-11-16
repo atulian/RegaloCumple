@@ -31,7 +31,7 @@ export function Cofre({ etapa }: { etapa: Etapa }) {
       tapaGeo: medioCilindro(D / 2, W),
       bandaGeo: medioCilindro(D / 2 + 0.025, 0.16),
       madera: new THREE.MeshStandardMaterial({ map: madera, roughness: 0.62, metalness: 0.05 }),
-      oro: new THREE.MeshStandardMaterial({ color: '#f0c063', roughness: 0.22, metalness: 1 }),
+      oro: new THREE.MeshStandardMaterial({ color: '#f3c56a', roughness: 0.32, metalness: 0.6, emissive: '#6b4409', emissiveIntensity: 0.55 }),
       brillo: new THREE.MeshBasicMaterial({ color: new THREE.Color(4, 2.7, 1.1), toneMapped: false }),
       haz: new THREE.MeshBasicMaterial({
         color: new THREE.Color(2.2, 1.6, 0.8),
@@ -72,7 +72,7 @@ export function Cofre({ etapa }: { etapa: Etapa }) {
     if (t < 0) {
       tapa.current.rotation.x = -0.035 - latido * 0.02
       g.rotation.z = 0
-      luz.current.intensity = 1 + latido * 1.6
+      luz.current.intensity = 0.25 + latido * 0.45
       r.haz.opacity = 0
       r.piso.opacity = 0.25 + latido * 0.15
       return
@@ -117,7 +117,7 @@ export function Cofre({ etapa }: { etapa: Etapa }) {
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, H + 0.002, 0]} material={r.brillo}>
           <planeGeometry args={[W - 0.12, D - 0.12]} />
         </mesh>
-        <pointLight ref={luz} position={[0, H * 0.95, D / 2 + 0.7]} color="#ffc266" intensity={3} distance={9} />
+        <pointLight ref={luz} position={[0, H * 0.95, D / 2 + 1.1]} color="#ffc266" intensity={3} distance={9} />
         <mesh position={[0, H + 2.6, 0]} material={r.haz}>
           <cylinderGeometry args={[2.1, 0.62, 5.2, 40, 1, true]} />
         </mesh>

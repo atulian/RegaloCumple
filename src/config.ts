@@ -15,6 +15,22 @@ export const config = {
     firma: 'con todo mi amor',
   },
 
+  /** Lo primero que ve al escanear el QR: el sobre y tu carta */
+  carta: {
+    aviso: 'Llegó algo para vos,',
+    titulo: 'Amor',
+    pista: 'Tocá el sobre, amor',
+    lineas: [
+      'Amor:',
+      'Hoy es tu día, y quería que empezara distinto.',
+      'Te preparé algo con recuerdos nuestros, un deseo para pedir y una sorpresa al final.',
+      'Tomate tu tiempo, es todo para vos.',
+      '¡Feliz cumple, amor!',
+    ],
+    firma: 'Con todo mi amor',
+    boton: 'Empezar, amor',
+  },
+
   intro: {
     saludo: 'Feliz cumple,',
     titulo: 'Amor',

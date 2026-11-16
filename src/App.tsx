@@ -5,6 +5,7 @@ import { config } from './config'
 import { Escena } from './escena/Escena'
 import { Album } from './pantallas/Album'
 import { Cumple } from './pantallas/Cumple'
+import { Sobre } from './pantallas/Sobre'
 import { Ticket } from './pantallas/Ticket'
 import { alHaberMusica, alternarSilencio, campanitas, iniciarAudio } from './sonido'
 
@@ -15,7 +16,7 @@ const aparecer = {
 }
 
 export default function App() {
-  const [etapa, setEtapa] = useState<Etapa>('intro')
+  const [etapa, setEtapa] = useState<Etapa>('sobre')
   const [hayMusica, setHayMusica] = useState(false)
   const [mudo, setMudo] = useState(false)
 
@@ -57,6 +58,8 @@ export default function App() {
       <Escena etapa={etapa} />
 
       <AnimatePresence mode="wait">
+        {etapa === 'sobre' && <Sobre key="sobre" alTerminar={() => setEtapa('intro')} />}
+
         {etapa === 'intro' && (
           <motion.button
             key="intro"
@@ -69,9 +72,6 @@ export default function App() {
             aria-label={config.intro.pista}
           >
             <div className="arriba">
-              <motion.p className="para" variants={aparecer} transition={{ duration: 1.1 }}>
-                Para {config.para}
-              </motion.p>
               <motion.p className="saludo" variants={aparecer} transition={{ duration: 1.1 }}>
                 {config.intro.saludo}
               </motion.p>
