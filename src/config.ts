@@ -79,7 +79,7 @@ export const config = {
   /** Todos los textos del pase de embarque se cambian acá */
   ticket: {
     anuncio: 'Armá la valija, chuli',
-    titulo: '¡Nos vamos a Río!',
+    titulo: '¡Volvemos a Río!',
     aerolinea: 'Chuli Airlines',
     pasajera: 'Mi Gordi',
     origenCodigo: 'COR',
