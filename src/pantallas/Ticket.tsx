@@ -83,6 +83,24 @@ export function Ticket({ alRepetir }: { alRepetir: () => void }) {
         <path d="M0 130v-22c40-4 60-16 92-14 20 1 30 12 48 8 22-5 26-58 56-78 22-14 44 4 54 34 8 24 22 34 48 30 28-4 40-22 62-24 16-1 30 6 40 14v52z" />
       </svg>
 
+      {/* nosotros tres mirando el atardecer */}
+      <svg className="rio-nosotros" viewBox="0 0 120 110" aria-hidden>
+        <path className="corazon" d="M52 22c-5-4-8-7-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 60 11c0 4-3 7-8 11z" />
+        <g className="pareja">
+          <circle cx="40" cy="38" r="9" />
+          <path d="M28 104V62a12 12 0 0 1 24 0v42z" />
+          <path d="M57 44a8.5 8.5 0 0 1 17 0c2 8 3 16 1 24H56c-2-8-1-16 1-24z" />
+          <path d="M54 104V70a11 11 0 0 1 22 0v34z" />
+          <path d="M46 66q10-6 14 4" strokeWidth="6" strokeLinecap="round" fill="none" stroke="currentColor" />
+        </g>
+        <g>
+          <ellipse cx="97" cy="96" rx="10" ry="9" />
+          <circle cx="96" cy="82" r="7" />
+          <path d="M90 78c-5 1-5 12-2 15 3 1 4-8 4-14zM102 78c5 1 5 12 2 15-3 1-4-8-4-14z" />
+          <path className="colita" d="M106 98q8-2 8-10" strokeWidth="3.5" strokeLinecap="round" fill="none" stroke="currentColor" />
+        </g>
+      </svg>
+
       <div className="rio-contenido">
         <motion.p
           className="saludo"

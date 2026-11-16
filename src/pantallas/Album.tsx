@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, type PanInfo } from 'motion/react'
 import { config } from '../config'
 import { fotos } from '../fotos'
+import { Perrita } from './Perrita'
 
 /** inclinación fija por foto, para que la pila se vea desordenada pero estable */
 const giro = (i: number) => (((i * 7919) % 13) - 6) * 1.1
@@ -122,9 +123,12 @@ export function Album({ alTerminar }: { alTerminar: () => void }) {
         animate={{ opacity: actual < total ? 1 : 0 }}
         transition={{ delay: actual === 0 ? 1.6 : 0, duration: 0.8 }}
       >
-        <p className="contador">
-          {Math.min(actual + 1, total)} <span>/ {total}</span>
-        </p>
+        <div className="contador-fila">
+          <Perrita className="perrita-album" />
+          <p className="contador">
+            {Math.min(actual + 1, total)} <span>/ {total}</span>
+          </p>
+        </div>
         <button className="siguiente" onClick={() => actual < total && pasar(1, -0.25)}>
           {config.album.pista} <span aria-hidden>→</span>
         </button>

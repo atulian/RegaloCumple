@@ -17,6 +17,9 @@ export const config = {
     pista: 'Deslizá cada foto, amor',
     /** Se van repitiendo en orden si hay más fotos que frases */
     frases: [
+      'Nuestra familia, amor',
+      'Mirá esa carita, amor',
+      'Así de en paz me hacés sentir, amor',
       'Todo empezó con vos, amor',
       'Mi lugar favorito sos vos, amor',
       'Con vos todo es mejor, amor',
@@ -30,11 +33,18 @@ export const config = {
     ],
   },
 
+  cumple: {
+    titulo: '¡Feliz cumple, amor!',
+    pista: 'Soplá las velitas, amor',
+    deseo: 'Tu deseo ya viene en camino, amor…',
+  },
+
   regalo: {
     titulo: 'Y falta lo mejor, amor…',
     pista: 'Tocá el regalo, amor',
   },
 
+  /** Todos los textos del pase de embarque se cambian acá */
   ticket: {
     anuncio: 'Armá la valija, amor',
     titulo: '¡Nos vamos a Río!',

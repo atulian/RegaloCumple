@@ -1,1 +1,1 @@
-export type Etapa = 'intro' | 'abriendo' | 'album' | 'regalo' | 'abriendoRegalo' | 'ticket'
+export type Etapa = 'intro' | 'abriendo' | 'album' | 'cumple' | 'regalo' | 'abriendoRegalo' | 'ticket'

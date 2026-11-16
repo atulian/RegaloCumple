@@ -4,6 +4,7 @@ import type { Etapa } from './tipos'
 import { config } from './config'
 import { Escena } from './escena/Escena'
 import { Album } from './pantallas/Album'
+import { Cumple } from './pantallas/Cumple'
 import { Ticket } from './pantallas/Ticket'
 import { alHaberMusica, alternarSilencio, campanitas, iniciarAudio } from './sonido'
 
@@ -88,7 +89,9 @@ export default function App() {
           </motion.button>
         )}
 
-        {etapa === 'album' && <Album key="album" alTerminar={() => setEtapa('regalo')} />}
+        {etapa === 'album' && <Album key="album" alTerminar={() => setEtapa('cumple')} />}
+
+        {etapa === 'cumple' && <Cumple key="cumple" alTerminar={() => setEtapa('regalo')} />}
 
         {etapa === 'regalo' && (
           <motion.button

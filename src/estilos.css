@@ -582,3 +582,233 @@ button {
     margin-top: 2vh;
   }
 }
+
+/* ---------- la perrita ---------- */
+.perrita {
+  overflow: visible;
+}
+
+.perrita * {
+  transform-box: view-box;
+}
+
+.p-cola {
+  transform-origin: 136px 180px;
+  animation: cola 0.32s ease-in-out infinite alternate;
+}
+
+.p-cabeza {
+  transform-origin: 100px 128px;
+  animation: cabeza 3.4s ease-in-out infinite;
+}
+
+.p-oreja.izq {
+  transform-origin: 64px 62px;
+  animation: oreja 3.4s ease-in-out infinite;
+}
+
+.p-oreja.der {
+  transform-origin: 136px 62px;
+  animation: oreja 3.4s ease-in-out infinite reverse;
+}
+
+.p-ojos {
+  transform-origin: 100px 84px;
+  animation: parpadeo 4.2s infinite;
+}
+
+.p-lengua {
+  transform-origin: 100px 112px;
+  animation: lengua 0.5s ease-in-out infinite alternate;
+}
+
+.perrita.salta {
+  animation: salto 0.55s cubic-bezier(0.3, 0, 0.4, 1) 6 alternate;
+}
+
+@keyframes cola {
+  from { transform: rotate(-16deg); }
+  to { transform: rotate(24deg); }
+}
+
+@keyframes cabeza {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(6deg); }
+}
+
+@keyframes oreja {
+  0%, 100% { transform: rotate(3deg); }
+  50% { transform: rotate(-5deg); }
+}
+
+@keyframes parpadeo {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+@keyframes lengua {
+  from { transform: scaleY(0.8); }
+  to { transform: scaleY(1.15); }
+}
+
+@keyframes salto {
+  from { transform: translateY(0) rotate(0); }
+  to { transform: translateY(-34%) rotate(-6deg); }
+}
+
+.contador-fila {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.perrita-album {
+  width: 58px;
+  margin-bottom: -4px;
+}
+
+/* ---------- cumple ---------- */
+.cumple {
+  background: radial-gradient(ellipse at 50% 60%, rgba(120, 40, 90, 0.35), rgba(13, 8, 24, 0.75));
+  overflow: hidden;
+}
+
+.cumple-titulo {
+  position: relative;
+  min-height: 2.2em;
+  font-size: clamp(44px, 12.5vw, 76px);
+}
+
+.globos {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.globo {
+  position: absolute;
+  bottom: -120px;
+  width: 54px;
+  height: 66px;
+  border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;
+  opacity: 0.85;
+  box-shadow: inset -8px -10px 16px rgba(0, 0, 0, 0.22), inset 8px 8px 14px rgba(255, 255, 255, 0.35);
+  animation: globo 12s linear infinite;
+}
+
+.globo::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 98%;
+  border: 5px solid transparent;
+  border-bottom-color: currentColor;
+  transform: translateX(-50%) translateY(-6px);
+}
+
+.globo::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 4px);
+  width: 1px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes globo {
+  0% { transform: translate(0, 0) rotate(-4deg); }
+  50% { transform: translate(18px, -62vh) rotate(5deg); }
+  100% { transform: translate(-8px, -125vh) rotate(-4deg); }
+}
+
+.mesa {
+  position: relative;
+  width: min(74vw, 38vh, 330px);
+  margin-right: -6%;
+}
+
+.torta {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 40px rgba(255, 190, 110, 0.25));
+}
+
+.llama {
+  transform-box: view-box;
+  animation: llama 0.5s ease-in-out infinite alternate;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+@keyframes llama {
+  from { transform: scale(1, 0.92) rotate(-4deg); }
+  to { transform: scale(0.94, 1.1) rotate(4deg); }
+}
+
+.apagada .llama {
+  opacity: 0;
+  animation: none;
+}
+
+.humo {
+  opacity: 0;
+}
+
+.apagada .humo {
+  animation: humo 1.6s ease-out forwards;
+}
+
+@keyframes humo {
+  0% { opacity: 0.7; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-26px); }
+}
+
+.perrita-cumple {
+  position: absolute;
+  left: -30%;
+  bottom: -5%;
+  width: 52%;
+}
+
+/* ---------- nosotros en Río ---------- */
+.rio-nosotros {
+  position: absolute;
+  right: 3%;
+  bottom: 12vh;
+  width: clamp(72px, 21vw, 104px);
+  fill: #2a0f3c;
+  color: #2a0f3c;
+  overflow: visible;
+}
+
+.rio-nosotros * {
+  transform-box: view-box;
+}
+
+.rio-nosotros .pareja {
+  transform-origin: 52px 104px;
+  animation: mecer 4s ease-in-out infinite;
+}
+
+.rio-nosotros .colita {
+  transform-origin: 106px 98px;
+  animation: cola 0.35s ease-in-out infinite alternate;
+}
+
+.rio-nosotros .corazon {
+  fill: #ff6f91;
+  transform-origin: 52px 16px;
+  animation: corazon 3s ease-in-out infinite;
+}
+
+@keyframes mecer {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+@keyframes corazon {
+  0% { transform: translateY(8px) scale(0.5); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(-22px) scale(1.1); opacity: 0; }
+}
