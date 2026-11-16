@@ -1,0 +1,110 @@
+html,
+body,
+#root {
+  overflow: auto;
+}
+
+.tarjeta-pagina {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: #05030a;
+}
+
+.tarjeta {
+  position: relative;
+  width: min(92vw, 64vh, 620px);
+  aspect-ratio: 105 / 148;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2cqw;
+  padding: 9cqw 8cqw;
+  text-align: center;
+  border-radius: 4cqw;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 58%, rgba(240, 190, 110, 0.22), transparent 55%),
+    radial-gradient(circle at 12% 8%, rgba(217, 80, 110, 0.25), transparent 40%),
+    radial-gradient(circle at 90% 95%, rgba(120, 60, 180, 0.3), transparent 45%),
+    #0d0818;
+}
+
+.tarjeta-borde {
+  position: absolute;
+  inset: 3cqw;
+  border: 0.35cqw solid rgba(240, 200, 119, 0.55);
+  border-radius: 2.4cqw;
+  pointer-events: none;
+}
+
+.tarjeta .para {
+  font-size: 2.4cqw;
+  margin: 0;
+}
+
+.tarjeta .titulo-xl {
+  font-size: 25cqw;
+  margin: -2cqw 0 -3cqw;
+}
+
+.tarjeta .bajada {
+  font-size: 5.2cqw;
+  margin: 0;
+}
+
+.qr-marco {
+  width: 46cqw;
+  padding: 3cqw;
+  margin: 2.5cqw 0 1.5cqw;
+  border-radius: 4cqw;
+  background: linear-gradient(170deg, #fffdf8, #f6ecd9);
+  box-shadow:
+    0 0 0 0.6cqw rgba(240, 200, 119, 0.9),
+    0 0 12cqw rgba(240, 190, 110, 0.45);
+}
+
+.qr {
+  display: block;
+  width: 100%;
+  color: #1c0d2b;
+}
+
+.tarjeta .pista {
+  font-size: 2.6cqw;
+  padding: 2.4cqw 4.4cqw;
+}
+
+.tarjeta-firma {
+  font-family: var(--mano);
+  font-size: 5.6cqw;
+  color: var(--oro-claro);
+}
+
+.tarjeta-perrita {
+  position: absolute;
+  left: 4.5cqw;
+  bottom: 4cqw;
+  width: 21cqw;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+  .tarjeta-pagina {
+    padding: 0;
+    background: none;
+  }
+  .tarjeta {
+    width: 100vw;
+    border-radius: 0;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

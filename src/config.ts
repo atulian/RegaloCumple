@@ -5,6 +5,16 @@ export const config = {
   /** Único lugar donde aparece su nombre completo */
   para: 'Mica Collino',
 
+  /** Dirección publicada del regalo: es a donde lleva el QR de la tarjeta */
+  url: 'https://atulian.github.io/RegaloCumple/',
+
+  tarjeta: {
+    titulo: 'Amor',
+    texto: 'tengo algo guardado para vos',
+    pista: 'Escaneame, amor',
+    firma: 'con todo mi amor',
+  },
+
   intro: {
     saludo: 'Feliz cumple,',
     titulo: 'Amor',
