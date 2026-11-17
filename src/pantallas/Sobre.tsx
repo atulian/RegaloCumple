@@ -126,6 +126,14 @@ export function Sobre({ alTerminar }: { alTerminar: () => void }) {
           animate={abierto ? { opacity: 0, x: -60, transition: { delay: 1, duration: 0.6 } } : { opacity: 1, x: 0 }}
           transition={{ delay: 1.2, type: 'spring', stiffness: 120, damping: 12 }}
         >
+          <motion.span
+            className="globo-texto"
+            initial={{ opacity: 0, scale: 0.4, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ delay: 2.2, type: 'spring', stiffness: 220, damping: 13 }}
+          >
+            {config.perrita.globo}
+          </motion.span>
           <Perrita />
         </motion.div>
       </div>

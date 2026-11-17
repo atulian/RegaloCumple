@@ -957,3 +957,45 @@ button {
   opacity: 0.01;
   pointer-events: none;
 }
+
+/* globo de diálogo de la perrita */
+.sobre-perrita {
+  position: relative;
+}
+
+.globo-texto {
+  position: absolute;
+  left: 62%;
+  bottom: 88%;
+  padding: 7px 15px 8px;
+  white-space: nowrap;
+  font-family: var(--mano);
+  font-size: clamp(21px, 6vw, 26px);
+  line-height: 1;
+  color: var(--tinta);
+  background: #fffaf0;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+  transform-origin: 0 100%;
+}
+
+.globo-texto::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: calc(100% - 2px);
+  border: 9px solid transparent;
+  border-top-color: #fffaf0;
+  border-left-width: 3px;
+  border-bottom-width: 0;
+}
+
+@media (max-height: 700px) {
+  .sobre {
+    margin-top: 2vh;
+    width: min(70vw, 300px);
+  }
+  .sobre-perrita {
+    margin-bottom: 2vh;
+  }
+}

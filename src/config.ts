@@ -8,6 +8,11 @@ export const config = {
   /** Dirección publicada del regalo: es a donde lleva el QR de la tarjeta */
   url: 'https://atulian.github.io/RegaloCumple/',
 
+  /** Lo que dice la perrita en su globo, al lado del sobre */
+  perrita: {
+    globo: '¡Soy Bruna!',
+  },
+
   /** Música: el código del video de YouTube (lo que va después de youtu.be/). Vacío = usa public/musica.mp3 */
   musica: {
     youtube: 'M05xCP34uUw',
@@ -50,11 +55,11 @@ export const config = {
     /** Una frase por foto, en orden. Se repiten si hay más fotos que frases */
     frases: [
       'Nuestra familia',
-      'Mirá esa carita, chuli',
+      'Nuestra hija perruna',
       'Así de en paz me hacés sentir',
       'Las reinas de la casa',
       'Mi lugar favorito sos vos, gordi',
-      'Esa sonrisa, chuli',
+      'La sonrisa más linda',
       'Brindar con vos',
       'Las llaves de nuestra casa',
       'De paseo con vos',
@@ -63,7 +68,7 @@ export const config = {
       'Un beso en las nubes',
       'Cantando juntos',
       'Entre viñedos con vos',
-      'Tardes así, gordi',
+      'Tardes así',
       'Río, la primera vez',
       'Arriba del Pan de Azúcar',
       'Mar, sol y vos, chuli',
