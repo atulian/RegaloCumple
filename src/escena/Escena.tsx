@@ -23,7 +23,9 @@ function Camara({ etapa }: { etapa: Etapa }) {
 /** Achica los objetos para que entren en pantallas angostas (celular vertical) */
 function Ajuste({ children }: { children: React.ReactNode }) {
   const ancho = useThree((s) => s.viewport.getCurrentViewport(s.camera, [0, 0, 0]).width)
-  const escala = Math.min(1.15, ancho / 3.75)
+  const horizontal = useThree((s) => s.size.width > s.size.height)
+  // en horizontal (tele, compu) el texto ocupa la parte de arriba: objetos más chicos
+  const escala = horizontal ? 0.84 : Math.min(1.15, ancho / 3.75)
   return <group scale={escala}>{children}</group>
 }
 

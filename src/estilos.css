@@ -999,3 +999,57 @@ button {
     margin-bottom: 2vh;
   }
 }
+
+/* ---------- pantallas horizontales: tele, compu, celular acostado ---------- */
+.sobre-zona {
+  max-width: 560px;
+}
+
+@media (orientation: landscape) {
+  .arriba {
+    margin-top: 0;
+  }
+  .titulo-xl {
+    font-size: clamp(56px, 17vh, 150px);
+  }
+  .saludo {
+    font-size: clamp(18px, 4.2vh, 34px);
+  }
+  .bajada {
+    font-size: clamp(16px, 3.6vh, 28px);
+    max-width: none;
+  }
+  .sobre-capa .titulo-l {
+    font-size: clamp(48px, 14vh, 120px);
+  }
+  .sobre {
+    margin-top: 16vh;
+    width: min(46vh, 380px);
+  }
+  .carta {
+    width: min(86vw, 62vh, 460px);
+    font-size: clamp(17px, 3.5vh, 28px);
+  }
+  .polaroid {
+    width: min(76vw, 44vh, 520px);
+  }
+  .polaroid figcaption {
+    font-size: clamp(18px, 3.6vh, 34px);
+  }
+  .mesa {
+    width: min(74vw, 44vh, 460px);
+  }
+  .ticket-perspectiva {
+    width: min(90vw, 58vh, 520px);
+  }
+}
+
+@media (orientation: landscape) {
+  .sobre-zona {
+    max-width: min(92vw, 110vh);
+  }
+  .sobre-perrita {
+    margin-left: 0;
+    margin-bottom: 10vh;
+  }
+}
