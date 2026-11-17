@@ -26,6 +26,19 @@ export const config = {
     firma: 'con todo mi amor',
   },
 
+  /** Pantalla para la tele (tele.html): cuenta regresiva y, a la hora indicada, aparece el QR */
+  tele: {
+    /** Fecha y hora en que se revela, en la hora local del dispositivo que transmite */
+    revelar: '2026-11-17T00:00:00',
+    espera: 'Algo está por llegar…',
+    globoEspera: '¡Ya falta poco!',
+    saludo: 'Feliz cumple,',
+    titulo: 'Chuli',
+    texto: 'tengo algo guardado para vos',
+    pista: 'Escaneá con la cámara de tu celu',
+    globo: '¡Feliz cumple!',
+  },
+
   /** Lo primero que ve al escanear el QR: el sobre y tu carta */
   carta: {
     aviso: 'Llegó algo para vos,',

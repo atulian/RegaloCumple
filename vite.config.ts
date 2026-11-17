@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 1500,
-    rollupOptions: { input: { main: 'index.html', tarjeta: 'tarjeta.html' } },
+    rollupOptions: { input: { main: 'index.html', tarjeta: 'tarjeta.html', tele: 'tele.html' } },
   },
 })

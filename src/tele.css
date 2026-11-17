@@ -1,0 +1,186 @@
+.tele {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 50%, rgba(240, 190, 110, 0.2), transparent 45%),
+    radial-gradient(circle at 10% 10%, rgba(217, 80, 110, 0.28), transparent 42%),
+    radial-gradient(circle at 92% 96%, rgba(120, 60, 180, 0.32), transparent 45%),
+    #0d0818;
+}
+
+.tele-borde {
+  position: absolute;
+  inset: 3vh;
+  border: 0.35vh solid rgba(240, 200, 119, 0.5);
+  border-radius: 2.4vh;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.tele-estrellas {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 22%, #ffe6b3, transparent), radial-gradient(1.5px 1.5px at 28% 68%, #ff9db5, transparent),
+    radial-gradient(2px 2px at 44% 14%, #ffe6b3, transparent), radial-gradient(1.5px 1.5px at 58% 82%, #ffe6b3, transparent),
+    radial-gradient(2px 2px at 71% 30%, #ff9db5, transparent), radial-gradient(1.5px 1.5px at 86% 62%, #ffe6b3, transparent),
+    radial-gradient(1.5px 1.5px at 93% 18%, #ffe6b3, transparent), radial-gradient(2px 2px at 6% 84%, #ffe6b3, transparent),
+    radial-gradient(1.5px 1.5px at 36% 42%, #ffe6b3, transparent), radial-gradient(1.5px 1.5px at 64% 54%, #ff9db5, transparent);
+  animation: titilar 4s ease-in-out infinite alternate;
+}
+
+@keyframes titilar {
+  from { opacity: 0.45; }
+  to { opacity: 1; }
+}
+
+.tele-espera,
+.tele-qr {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tele-espera {
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.tele .saludo {
+  font-size: clamp(22px, 5.5vh, 64px);
+}
+
+.tele-reloj {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(64px, 27vh, 340px);
+  line-height: 1;
+  font-variant-numeric: tabular-nums lining-nums;
+  background: linear-gradient(180deg, #fff3d6 10%, var(--oro) 55%, #c98f3c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 4vh rgba(240, 190, 110, 0.4));
+}
+
+.tele-perrita {
+  position: absolute;
+  left: 7vh;
+  bottom: 6vh;
+  width: clamp(80px, 19vh, 240px);
+  z-index: 2;
+}
+
+.tele .globo-texto {
+  font-size: clamp(18px, 4.4vh, 52px);
+  padding: 1.2vh 2.4vh 1.4vh;
+  border-radius: 3vh;
+}
+
+.tele-qr {
+  gap: 9vw;
+  padding: 0 8vw;
+}
+
+.tele-texto {
+  position: relative;
+  z-index: 1;
+}
+
+.tele .para {
+  font-size: clamp(10px, 1.9vh, 22px);
+  margin-bottom: 3vh;
+}
+
+.tele .titulo-xl {
+  font-size: clamp(80px, 30vh, 380px);
+}
+
+.tele .bajada {
+  font-size: clamp(18px, 4.6vh, 54px);
+  max-width: none;
+}
+
+.tele-codigo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+}
+
+.tele .qr-marco {
+  width: clamp(180px, 50vh, 620px);
+  padding: 3vh;
+  border-radius: 4vh;
+  background: linear-gradient(170deg, #fffdf8, #f6ecd9);
+  box-shadow: 0 0 0 0.7vh rgba(240, 200, 119, 0.9), 0 0 12vh rgba(240, 190, 110, 0.5);
+  animation: latir 2.6s ease-in-out infinite;
+}
+
+@keyframes latir {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+
+.tele .qr {
+  display: block;
+  width: 100%;
+  color: #1c0d2b;
+}
+
+.tele .pista {
+  font-size: clamp(11px, 2.3vh, 26px);
+  padding: 1.8vh 3.4vh;
+}
+
+.tele .globo {
+  width: 9vh;
+  height: 11vh;
+  bottom: -30vh;
+}
+
+.tele .globo::after {
+  height: 12vh;
+}
+
+/* si se transmite un celular en vertical */
+@media (orientation: portrait) {
+  .tele-qr {
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .tele .titulo-xl {
+    font-size: clamp(70px, 26vw, 200px);
+  }
+  .tele .saludo {
+    font-size: clamp(20px, 6vw, 48px);
+  }
+  .tele .bajada {
+    font-size: clamp(17px, 5vw, 40px);
+  }
+  .tele .qr-marco {
+    width: min(62vw, 34vh);
+  }
+  .tele-reloj {
+    font-size: clamp(56px, 21vw, 220px);
+  }
+  .tele-perrita {
+    width: clamp(70px, 20vw, 150px);
+    left: 5vw;
+  }
+}
+
+@media (orientation: landscape) {
+  .tele-texto {
+    margin-bottom: 25vh;
+  }
+  .tele .pista {
+    white-space: nowrap;
+  }
+}
